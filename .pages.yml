@@ -1,0 +1,37 @@
+
+media:
+  input: media
+  output: /media
+
+content:
+  - name: posts
+    label: Gujarati Articles
+    type: collection
+    path: content/posts
+    view:
+      fields: [title, date, category]
+    fields:
+      - name: title
+        label: Article Title
+        type: string
+        required: true
+      - name: date
+        label: Publish Date
+        type: date
+        required: true
+      - name: category
+        label: Category
+        type: select
+        options:
+          values:
+            - સમાચાર
+            - શાયરી
+            - સુવિચાર
+            - લેખ
+      - name: image
+        label: Cover Image
+        type: image
+      - name: body
+        label: Article Content
+        type: rich-text
+      
